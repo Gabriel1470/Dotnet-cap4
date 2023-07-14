@@ -18,5 +18,5 @@ myQueueStr.Queue("Gio");
 myQueueStr.Queue("Manu");
 myQueueStr.Queue("Albe");
 
-myQueueString.Dequeue();
-myQueueString.Peek();
+myQueueStr.Dequeue();
+myQueueStr.Peek();
