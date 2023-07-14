@@ -5,15 +5,8 @@ using System.Threading.Tasks;
 
 namespace Dotnet_cap4
 {
-    public class FcDequeue<T> : MyQueue<T>
+      public interface FcDequeue<T>
     {
-        public T Dequeue()
-        {
-            if (firstElement == -1)
-            {
-                throw new InvalidOperationException();
-            }
-            return array[firstElement--];
-        }
+        public T Dequeue();
     }
 }

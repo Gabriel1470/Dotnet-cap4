@@ -5,9 +5,36 @@ using System.Threading.Tasks;
 
 namespace Dotnet_cap4
 {
-     public class MyQueue<T>
+     internal class MyQueue<T> : FcQueue<T>, FcDequeue<T>, FcPeek<T>
     {
         public T[] array = new T[10];
         public int firstElement;
+
+        public void Queue(T value)
+        {
+            if (firstElement == array.Length - 1)
+            {
+                throw new StackOverflowException();
+            }
+            array[++firstElement] = value;
+        }
+
+        public T Dequeue()
+        {
+            if (firstElement == -1)
+            {
+                throw new InvalidOperationException();
+            }
+            return array[firstElement--];
+        }
+
+        public T Peek()
+        {
+            if (firstElement == -1)
+            {
+                throw new InvalidOperationException();
+            }
+            return array[firstElement];
+        }
     }
 }

@@ -5,15 +5,9 @@ using System.Threading.Tasks;
 
 namespace Dotnet_cap4
 {
-      public class FcPeek<T> : MyQueue<T>
+       public interface FcPeek<T>
     {
-        public T Peek()
-        {
-            if (firstElement == -1)
-            {
-                throw new InvalidOperationException();
-            }
-            return array[firstElement];
-        }
+        public T Peek();
     }
+    
 }

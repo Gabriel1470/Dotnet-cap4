@@ -5,15 +5,8 @@ using System.Threading.Tasks;
 
 namespace Dotnet_cap4
 {
-        public class FcQueue<T> : MyQueue<T>
+      public interface FcQueue<T>
     {
-        public void Queue(T value)
-        {
-            if (firstElement == array.Length - 1)
-            {
-                throw new StackOverflowException();
-            }
-            array[++firstElement] = value;
-        }
+        void Queue(T value);
     }
 }
