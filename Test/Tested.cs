@@ -7,9 +7,18 @@ using Dotnet_cap4;
 
 namespace Dotnet_cap4.Test
 {
-    public class Tested
+    public class Tested : IDisposable
     {
-        [Fact]   MyQueue<int> myQueueInt = new MyQueue<int>();
+      var myQueueInt = new MyQueue<int>();
+        var myQueueStr = new MyQueue<string>();
+
+        public UnitTest()
+        {
+            this.myQueueInt= new MyQueue<int>();
+            this.myQueueStr = new MyQueue<string>();
+        }
+
+        MyQueue<int> myQueueInt = new MyQueue<int>();
         MyQueue<string> myQueueStr = new MyQueue<string>();
 
         [Fact]
