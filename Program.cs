@@ -1,22 +1,28 @@
 ﻿using Dotnet_cap4;
-var myQueueInt= new MyQueue<int>();
-
-myQueueInt.Queue(1);
-myQueueInt.Queue(2);
-myQueueInt.Queue(3);
-myQueueInt.Queue(4);
-
-myQueueInt.Dequeue();
-myQueueInt.Peek();
+FcQueue<int> fcQueueInt = new FcQueue<int>();
+FcDequeue<int> fcDequeueInt = new FcDequeue<int>();
+FcPeek<int> fcPeekInt = new FcPeek<int>();
 
 
+fcQueueInt.Queue(1);
+fcQueueInt.Queue(2);
+fcQueueInt.Queue(3);
+fcQueueInt.Queue(4);
 
-var myQueueStr = new MyQueue<string>();
 
-myQueueStr.Queue("Red");
-myQueueStr.Queue("Gio");
-myQueueStr.Queue("Manu");
-myQueueStr.Queue("Albe");
+fcDequeueInt.Dequeue();
+fcPeekInt.Peek();
 
-myQueueStr.Dequeue();
-myQueueStr.Peek();
+//-------------------------------------------
+
+FcQueue<string> fcQueueStr = new FcQueue<string>();
+FcDequeue<string> fcDequeueStr = new FcDequeue<string>();
+FcPeek<string> fcPeekStr = new FcPeek<string>();
+
+fcQueueStr.Queue("Marco");
+fcQueueStr.Queue("Luca");
+fcQueueStr.Queue("Emanuele");
+fcQueueStr.Queue("Alberto");
+
+fcDequeueStr.Dequeue();
+fcPeekStr.Peek();
