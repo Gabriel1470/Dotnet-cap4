@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace Dotnet_cap4
 {
-       public interface FcPeek<T>
+    public interface IMsn
     {
-        public T Peek();
+         void Info(string message);
     }
-    
 }

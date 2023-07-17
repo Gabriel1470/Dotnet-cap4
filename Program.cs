@@ -1,22 +1,20 @@
 ﻿using Dotnet_cap4;
-var myQueueInt = new MyQueue<int>();
+var arrayStorageInteger = new ArrayStorage<int>(10);
 
-myQueueInt.Queue(1);
-myQueueInt.Queue(2);
-myQueueInt.Queue(3);
-myQueueInt.Queue(4);
+arrayStorageInteger.Queue(1);
+arrayStorageInteger.Queue(2);
+arrayStorageInteger.Queue(3);
 
-myQueueInt.Dequeue();
-myQueueInt.Peek();
+arrayStorageInteger.Dequeue();
+arrayStorageInteger.Peek();
 
 //-------------------------------------------
 
-var myQueueStr = new MyQueue<string>();
+var arrayStorageString = new ArrayStorage<string>(10);
 
-myQueueStr.Queue("Red");
-myQueueStr.Queue("Gio");
-myQueueStr.Queue("Manu");
-myQueueStr.Queue("Albe");
+arrayStorageString.Queue("Red");
+arrayStorageString.Queue("Gio");
+arrayStorageString.Queue("Manu");
 
-myQueueStr.Dequeue();
-myQueueStr.Peek();
+arrayStorageString.Dequeue();
+arrayStorageString.Peek();

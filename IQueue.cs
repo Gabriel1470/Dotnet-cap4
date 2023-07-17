@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 
 namespace Dotnet_cap4
 {
-      public interface FcQueue<T>
+    public interface IQueue<T>
     {
-        void Queue(T value);
+         public void Queue(T value);
+        public T Dequeue();
+        public T Peek();
     }
 }
